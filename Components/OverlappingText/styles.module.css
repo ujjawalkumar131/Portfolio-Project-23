@@ -1,0 +1,25 @@
+.textcontainer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 2% 5%;
+}
+.toptext{
+  bottom: 20%;
+  text-align: end;
+  position: absolute;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.bottomtext{
+  color: rgb(75, 75, 75);
+  font-weight: 900;
+  font-size: clamp(3.8rem,13vw,14rem);
+  letter-spacing: .6rem;
+  line-height: .7;
+  text-transform: uppercase;
+}
