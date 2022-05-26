@@ -3,8 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
+  text-align: center;
+  font-size: clamp(2.4rem,6vw,4.5rem);
   font-weight: 800;
   padding: 5% 7%;
-  position: relative;
+  line-height: 120%;
+  margin-top: 20vh;
 }

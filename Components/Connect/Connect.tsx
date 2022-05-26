@@ -12,17 +12,17 @@ const Connect = ()=>{
   return (
   <div className={styles.connect} >
     <animated.div style={fade} className={styles.connectItem} >
-      <Link href="https://linkedin.com" passHref>
+      <Link href="https://www.linkedin.com/in/lohitaksha-malhotra-b84392201/" passHref>
       <Image src={linkedin} alt="linkedin" layout="fill"/>
       </Link>
     </animated.div>
     <animated.div style={fade} className={styles.connectItem}>
-      <Link href="https://github.com" passHref>
+      <Link href="https://github.com/Lohit244" passHref>
       <Image src={github} alt="github" layout="fill"/>
       </Link>
     </animated.div>
     <animated.div style={fade} className={styles.connectItem}>
-      <Link href="https://gmail.com" passHref>
+      <Link href="mailto:lohit244@gmail.com" passHref>
       <Image src={email} alt="email" layout="fill"/>
       </Link>
     </animated.div>

@@ -5,9 +5,12 @@ import Connect from '../Connect/Connect'
 import styles from "../../styles/home.module.css"
 
 const Landing = ()=>{
-  const fade= useSpring({to: {opacity: 1, x:0} ,from: {opacity: 0, x: 20}, delay: 200})
+  const [ref, inView] = useInView({
+    threshold: 0.2
+  })
+  const fade= useSpring({x: inView?0:20, opacity: inView?1:0, delay: 100});
   return(
-      <animated.div style={fade} className={styles.landing}>
+      <animated.div style={fade} className={styles.landing} ref={ref}>
         Hello there, I&apos;m <div className="blue"> Lohitaksha Malhotra,</div> Full stack developer and student at <div className="blue">BIT Mesra</div>
         <Connect/>
       </animated.div>

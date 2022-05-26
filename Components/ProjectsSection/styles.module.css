@@ -1,0 +1,57 @@
+.Projects{
+  margin: 5% 7%;
+}
+.CardContainer{
+  margin: 5% 0;
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+}
+.imageContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  position: relative;
+}
+.imageContainer img{
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.title{
+  font-size: clamp(1.6rem,4vw,4rem);
+  font-weight: 800;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 4%;
+}
+.content{
+  font-size: clamp(1rem, 2vw,1.4rem);
+  text-align: left;
+}
+.links{
+  margin-top: 5%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.links{
+  color: rgb(25, 128, 188);
+}
+@media (max-width: 800px){
+  .CardContainer{
+    padding: 3%;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .imageContainer{
+    width: 60vw;
+  }
+}

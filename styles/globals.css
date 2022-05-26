@@ -7,6 +7,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: black;
   color: white;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,4 +21,19 @@ a {
 }
 .blue{
   color: rgb(25, 128, 188);
+}
+.AboutText .blue{
+  display: inline;
+  font-weight: 800;
+}
+.AboutText{
+  padding-top: 7%;
+  font-size: clamp(1.4rem,3vw,3.5rem);
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: 400;
+  overflow: hidden;
+}
+.gap{
+  margin-top: 10vh;
 }
