@@ -19,7 +19,7 @@ export default function Projects(){
     <div className="gap"></div>
     <ProjectCard content={project2content} github="https://github.com/lohit244/vsbuddies-website" image={project2} projecturl="https://vsbuddies.netlify.app" title="VS Buddies" reverse />
     <div className="gap"></div>
-    <ProjectCard content={project3content} github="https://github.com/lohit244/portfolio22" image={project3} projecturl="https://lohit244.dev" title="Portfolio Project '22" />
+    <ProjectCard content={project3content} github="https://github.com/lohit244/portfolio22" image={project3} projecturl="https://lohit244.netlify.app" title="Portfolio Project '22" />
     <div className="gap"></div>
     <ProjectCard content={project4content} github="https://github.com/lohit244/4" image={project4} projecturl="https://lohit244.github.io/4" title="Portfolio Project '20" reverse/>
   </div>
