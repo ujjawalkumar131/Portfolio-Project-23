@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Landing from '../Components/LandingSection/Landing'
 import OverlappingText from '../Components/OverlappingText/OverlappingText'
 import styles from "../styles/home.module.css"
 const Home: NextPage = () => {
@@ -17,7 +18,8 @@ const Home: NextPage = () => {
           <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png"/>
           <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512x512.png"/>
       </Head>
-      <OverlappingText backgroundtext='Hi' toptext=''/>
+        <Landing/>
+        <OverlappingText backgroundtext='About me' toptext='A bit more about me'/>
     </div>
   )
 }
