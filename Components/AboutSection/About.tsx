@@ -15,8 +15,8 @@ export default function About(){
   <OverlappingText backgroundtext='About me' toptext='A bit more about me'/>
   <animated.div className="AboutText" style={fade}>
     I am Lohitaksha Malhotra, I am currently in my 3<sup>rd</sup> year persuing <div className="blue">Mechanical Engineering</div> at BIT Mesra.
-    My interests lie in <div className="blue">programming, web development and problem solving</div>. I am also interested in Linux (I use <div className="blue">Arch</div> btw)
-    and I am also a weeb.
+    My interests lie in <div className="blue">programming, web development and problem solving</div>. I use Linux ( <div className="blue">Arch</div> btw ).
+    I am also a <div className="blue">Weeb</div> and a <div className="blue">Gamer</div>.
   </animated.div>
   </div>
   )
