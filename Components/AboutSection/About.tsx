@@ -20,6 +20,4 @@ export default function About(){
   </animated.div>
   </div>
   )
-
-
 }
