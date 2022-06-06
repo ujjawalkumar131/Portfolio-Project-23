@@ -116,8 +116,8 @@
   transition: all 400ms ease-in-out;
 }
 .projectUrl:hover::after{
-  top: -10%;
-  left: -5%;
+  top: 15%;
+  left: 10%;
   width: 110%;
   height: 120%;
   outline: 4px solid rgb(25, 128, 188);
