@@ -116,11 +116,9 @@
   transition: all 400ms ease-in-out;
 }
 .projectUrl:hover::after{
-  top: -10%;
+  top: -15%;
   left: 10%;
-  width: 110%;
-  height: 120%;
-  outline: 4px solid rgb(25, 128, 188);
+  animation: projlinkanimation 1s ease-in-out infinite;
 }
 @media (max-width: 940px){
   .CardContainer{
@@ -157,5 +155,17 @@
   100%{
     left: 100%;
     width: 0%;
+  }
+}
+
+@keyframes projlinkanimation{
+  0%{
+    transform: translate(0,0);
+  }
+  50%{
+    transform: translate(-2%,3%);
+  }
+  100%{
+    transform: translate(0,0);
   }
 }
