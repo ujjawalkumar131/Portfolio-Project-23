@@ -19,6 +19,16 @@ a {
   box-sizing: border-box;
   scrollbar-color: #454a4d #202324;
 }
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #1f1f20;
+}
+::-webkit-scrollbar-thumb {
+    background: #373d40;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
 .blue{
   color: rgb(25, 128, 188);
 }
