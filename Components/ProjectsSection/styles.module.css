@@ -78,6 +78,7 @@
   color: rgb(25, 128, 188);
 }
 .github{
+  cursor: pointer;
   position: relative;
   border-radius: 0.4ch;
   outline: 2px solid rgb(25, 128, 188);
@@ -103,6 +104,7 @@
   position: relative;
   padding: 1ch 4ch;
   border-radius: 0.4ch;
+  cursor: pointer;
 }
 .projectUrl::after{
   content: "";

@@ -37,12 +37,16 @@ export default function ProjectCard({image, title, content, github, projecturl, 
           {tags.map(tag=><div className={styles.tag} key={tag}>{tag}</div>)}
         </div>
         <div className={styles.links}>
+          <Link href={github}>
           <div className={styles.github}>
-            <Link href={github}>Source</Link>
+            Source
           </div>
+          </Link>
+          <Link href={projecturl}>
           <div className={styles.projectUrl}>
-            <Link href={projecturl}>Link</Link>
+            Link
           </div>
+          </Link>
         </div>
       </animated.div>
     </div>
