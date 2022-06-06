@@ -116,7 +116,7 @@
   transition: all 400ms ease-in-out;
 }
 .projectUrl:hover::after{
-  top: 15%;
+  top: -10%;
   left: 10%;
   width: 110%;
   height: 120%;
