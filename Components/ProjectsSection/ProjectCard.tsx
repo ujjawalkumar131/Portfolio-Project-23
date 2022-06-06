@@ -10,10 +10,11 @@ type props = {
   content: string,
   github: string,
   projecturl: string,
-  reverse?: boolean
+  reverse?: boolean,
+  tags: string[]
 }
 
-export default function ProjectCard({image, title, content, github, projecturl, reverse=false}:props){
+export default function ProjectCard({image, title, content, github, projecturl, reverse=false, tags}:props){
 
   const [ref, inView] = useInView({
     threshold: 0.4
@@ -32,11 +33,14 @@ export default function ProjectCard({image, title, content, github, projecturl, 
         <div className={styles.content}>
           {content}
         </div>
+        <div className={styles.tags}>
+          {tags.map(tag=><div className={styles.tag} key={tag}>{tag}</div>)}
+        </div>
         <div className={styles.links}>
           <div className={styles.github}>
             <Link href={github}>Source</Link>
           </div>
-          <div className={styles.projecturl}>
+          <div className={styles.projectUrl}>
             <Link href={projecturl}>Link</Link>
           </div>
         </div>

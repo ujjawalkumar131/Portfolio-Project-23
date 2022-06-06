@@ -28,6 +28,7 @@ export default function Projects() {
 				image={project1}
 				projecturl="https://github.com"
 				title="Naps Website"
+				tags={["NextJs", "ExpressJs", "MongoDB", "Typescript"]}
 			/>
 			<div className="gap"></div>
 			<ProjectCard
@@ -37,6 +38,7 @@ export default function Projects() {
 				projecturl="https://vsbuddies.netlify.app"
 				title="VS Buddies"
 				reverse
+				tags={["ReactJs", "ExpressJs", "MongoDB", "VSCode Extension", "Firebase"]}
 			/>
 			<div className="gap"></div>
 			<ProjectCard
@@ -45,6 +47,7 @@ export default function Projects() {
 				image={project3}
 				projecturl="https://lohit244.netlify.app"
 				title="Portfolio Project '22"
+				tags={["NextJs", "Typescript"]}
 			/>
 			<div className="gap"></div>
 			<ProjectCard
@@ -54,6 +57,7 @@ export default function Projects() {
 				projecturl="https://lohit244.github.io/4"
 				title="Portfolio Project '20"
 				reverse
+				tags={["ReactJS"]}
 			/>
 		</div>
 	);

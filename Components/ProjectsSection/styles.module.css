@@ -22,6 +22,40 @@
   font-size: clamp(1.6rem,4vw,4rem);
   font-weight: 800;
 }
+.tags{
+  display: flex;
+  width: 100%;
+  padding: 2%;
+  gap: 3ch;
+  flex-wrap: wrap;
+}
+.tag{
+  padding: 1% 2%;
+  transition: transform ease-in-out 400ms;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4ch;
+}
+.tag:hover{
+  transform: rotate(-15deg);
+}
+.tag:nth-child(1){
+  background-color: orange;
+}
+.tag:nth-child(2){
+  background-color: rgb(42, 124, 216);
+}
+.tag:nth-child(3){
+  background-color: rgb(108, 225, 101);
+}
+.tag:nth-child(4){
+  background-color: rgb(155, 21, 213);
+}
+.tag:nth-child(5){
+  background-color: rgb(248, 99, 72);
+}
 .right{
   display: flex;
   flex-direction: column;
@@ -41,11 +75,54 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-}
-.links{
   color: rgb(25, 128, 188);
 }
-@media (max-width: 800px){
+.github{
+  position: relative;
+  border-radius: 0.4ch;
+  outline: 2px solid rgb(25, 128, 188);
+  padding: 1ch 2ch;
+  overflow: hidden;
+}
+.github::after{
+  content: "";
+  position: absolute;
+  top:-100%;
+  left:-90%;
+  width: 0%;
+  height: 400%;
+  background-color: rgb(25, 128, 188);
+  transform: rotate(35deg);
+  cursor: pointer;
+}
+.github:hover::after{
+  animation: githublinkanimation 800ms infinite;
+}
+.projectUrl{
+  outline: 2px solid rgb(25, 128, 188);
+  position: relative;
+  padding: 1ch 4ch;
+  border-radius: 0.4ch;
+}
+.projectUrl::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  outline: 2px solid rgb(25, 128, 188);
+  border-radius: 0.4ch;
+  top: 0;
+  left: 0;
+  transition: all 400ms ease-in-out;
+}
+.projectUrl:hover::after{
+  top: -10%;
+  left: -5%;
+  width: 110%;
+  height: 120%;
+  outline: 4px solid rgb(25, 128, 188);
+}
+@media (max-width: 940px){
   .CardContainer{
     padding: 3%;
     flex-direction: column !important;
@@ -53,5 +130,32 @@
   }
   .imageContainer{
     width: 60vw;
+  }
+}
+@media(max-width: 800px){
+  .github::after{
+    animation: githublinkanimation 800ms infinite;
+  }
+}
+@keyframes githublinkanimation {
+  0% {
+    left:-90%;
+    width: 0%;
+  }
+  30% {
+    left: 0%;
+    width: 15%;
+  }
+  50%{
+    left: 40%;
+    width: 25%;
+  }
+  70%{
+    left: 80%;
+    width: 15%;
+  }
+  100%{
+    left: 100%;
+    width: 0%;
   }
 }
