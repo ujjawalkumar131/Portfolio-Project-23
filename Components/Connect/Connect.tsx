@@ -8,7 +8,7 @@ import { animated, useSpring } from "react-spring"
 import { NextPage } from "next"
 
 const Connect = ()=>{
-  const fade= useSpring({to: {opacity: 1, x:0} ,from: {opacity: 0.1, x: 20}, delay: 600})
+  const fade= useSpring({to: {opacity: 1, x:0} ,from: {opacity: 0, x: 20}, delay: 600})
   return (
   <div className={styles.connect} >
     <animated.div style={fade} className={styles.connectItem} >

@@ -12,8 +12,8 @@ export default function OverlappingText({classname, toptext, backgroundtext}: pr
   const [ref, inView] = useInView({
     threshold: 0.4
   })
-  const fade= useSpring({y: inView?0:20, opacity: inView?1:0.1, delay: 150});
-  const fadetop= useSpring({y: inView?0:20, opacity: inView?1:0.1, delay: 750});
+  const fade= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 150});
+  const fadetop= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 750});
 
   return <div ref={ref} className={(classname?classname:"") + styles.textcontainer}>
     <animated.div style={fadetop} className={styles.toptext}>

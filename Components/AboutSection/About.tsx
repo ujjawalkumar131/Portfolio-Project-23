@@ -8,7 +8,7 @@ export default function About(){
   const [ref, inView] = useInView({
     threshold: 0.1
   })
-  const fade= useSpring({y: inView?0:20, opacity: inView?1:0.1, delay: 400});
+  const fade= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 400});
 
   return (
   <div className={styles.About} ref={ref}>

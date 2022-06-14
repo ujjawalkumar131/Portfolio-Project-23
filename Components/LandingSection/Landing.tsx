@@ -8,7 +8,7 @@ const Landing = ()=>{
   const [ref, inView] = useInView({
     threshold: 0.2
   })
-  const fade= useSpring({x: inView?0:20, opacity: inView?1:0.1, delay: 100});
+  const fade= useSpring({x: inView?0:20, opacity: inView?1:0, delay: 100});
   return(
       <animated.div style={fade} className={styles.landing} ref={ref}>
         Hello there, I&apos;m <div className="blue"> Lohitaksha Malhotra,</div> Full stack developer and student at <div className="blue">BIT Mesra</div>

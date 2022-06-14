@@ -19,8 +19,8 @@ export default function ProjectCard({image, title, content, github, projecturl, 
   const [ref, inView] = useInView({
     threshold: 0.4
   })
-  const fadeImage= useSpring({x: inView?0:20, opacity: inView?1:0.1, delay: 450});
-  const fade= useSpring({x: inView?0:20, opacity: inView?1:0.1, delay: 150});
+  const fadeImage= useSpring({x: inView?0:20, opacity: inView?1:0, delay: 450});
+  const fade= useSpring({x: inView?0:20, opacity: inView?1:0, delay: 150});
   return (
     <div ref={ref} className={styles.CardContainer} style={reverse?{flexDirection: "row-reverse"}:{flexDirection: "row"}}>
       <animated.div style={fadeImage} className={styles.imageContainer}>
