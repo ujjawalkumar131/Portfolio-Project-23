@@ -10,7 +10,6 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Lohitaksha | WebDev</title>
-        <meta name="google-site-verification" content="AzAx5apcm8IironHIAGBRyV11L7wl-w_dsPrX3YBH0Y" />
         <meta name="description" content="Lohitaksha Malhotra's portfolio website" />
           {/* Icons */}
           <link rel="shortcut icon" href="/images/favicon.ico" />
