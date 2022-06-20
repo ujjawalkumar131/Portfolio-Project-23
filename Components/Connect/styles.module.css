@@ -23,9 +23,20 @@
   content: "";
   position: absolute;
   width: 20%;
-  left: 15%;
+  left: 10%;
   background-color: rgb(75, 75, 75);
   height: 3px;
+}
+.res{
+  font-size: 1.4rem;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.1ch 2ch;
+  cursor: pointer;
+  line-height: 200%;
+  font-weight: 800;
 }
 @media (max-width: 800px){
   .connect{

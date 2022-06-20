@@ -26,6 +26,11 @@ const Connect = ()=>{
       <Image src={email} alt="email" layout="fill"/>
       </Link>
     </animated.div>
+    <animated.div style={fade}>
+      <Link href="/Resume.pdf " passHref>
+        <div className={styles.res}>Resume</div>
+      </Link>
+    </animated.div>
   </div>
   )
 }
