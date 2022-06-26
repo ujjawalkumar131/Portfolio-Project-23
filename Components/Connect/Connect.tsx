@@ -5,7 +5,6 @@ import linkedin from "../../public/images/linkedin.png"
 import github from "../../public/images/github.png"
 import email from "../../public/images/email.png"
 import { animated, useSpring } from "react-spring"
-import { NextPage } from "next"
 
 const Connect = ()=>{
   const fade= useSpring({to: {opacity: 1, x:0} ,from: {opacity: 0, x: 20}, delay: 600})
