@@ -47,7 +47,7 @@ export default function Projects() {
 				image={project3}
 				projecturl="https://lohit244.netlify.app"
 				title="Portfolio Project '22"
-				tags={["NextJs", "Typescript"]}
+				tags={["NextJs", "Typescript", "TailwindCSS"]}
 			/>
 			<div className="gap"></div>
 			<ProjectCard

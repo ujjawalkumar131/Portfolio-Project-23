@@ -42,19 +42,19 @@
   transform: rotate(-15deg);
 }
 .tag:nth-child(1){
-  background-color: orange;
+  @apply bg-orange-700;
 }
 .tag:nth-child(2){
-  background-color: rgb(42, 124, 216);
+  @apply bg-blue-700;
 }
 .tag:nth-child(3){
-  background-color: rgb(108, 225, 101);
+  @apply bg-green-700;
 }
 .tag:nth-child(4){
-  background-color: rgb(155, 21, 213);
+  @apply bg-purple-700;
 }
 .tag:nth-child(5){
-  background-color: rgb(248, 99, 72);
+  @apply bg-slate-700;
 }
 .right{
   display: flex;
