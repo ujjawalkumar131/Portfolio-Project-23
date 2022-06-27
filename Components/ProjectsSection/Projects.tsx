@@ -21,7 +21,7 @@ export default function Projects() {
 				backgroundtext="Projects"
 				toptext="Check out what i have worked on"
 			/>
-			<div className="gap"></div>
+			<div className="a10vhgap"></div>
 			<ProjectCard
 				content={project1content}
 				github="https://github.com/lohit244/naps-website"
@@ -30,7 +30,7 @@ export default function Projects() {
 				title="Naps Website"
 				tags={["NextJs", "ExpressJs", "MongoDB", "Typescript"]}
 			/>
-			<div className="gap"></div>
+			<div className="a10vhgap"></div>
 			<ProjectCard
 				content={project2content}
 				github="https://github.com/lohit244/vsbuddies-website"
@@ -40,7 +40,7 @@ export default function Projects() {
 				reverse
 				tags={["ReactJs", "ExpressJs", "MongoDB", "VSCode Extension", "Firebase"]}
 			/>
-			<div className="gap"></div>
+			<div className="a10vhgap"></div>
 			<ProjectCard
 				content={project3content}
 				github="https://github.com/lohit244/portfolio22"
@@ -49,7 +49,7 @@ export default function Projects() {
 				title="Portfolio Project '22"
 				tags={["NextJs", "Typescript", "TailwindCSS"]}
 			/>
-			<div className="gap"></div>
+			<div className="a10vhgap"></div>
 			<ProjectCard
 				content={project4content}
 				github="https://github.com/lohit244/4"
