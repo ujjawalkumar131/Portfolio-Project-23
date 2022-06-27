@@ -1,13 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import About from '../Components/AboutSection/About'
 import Landing from '../Components/LandingSection/Landing'
 import Projects from '../Components/ProjectsSection/Projects'
-import styles from "../styles/home.module.css"
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Lohitaksha | WebDev</title>
         <meta name="description" content="Lohitaksha Malhotra's portfolio website" />
@@ -22,7 +20,7 @@ const Home: NextPage = () => {
         <Landing/>
         <About/>
         <Projects/>
-    </div>
+    </>
   )
 }
 

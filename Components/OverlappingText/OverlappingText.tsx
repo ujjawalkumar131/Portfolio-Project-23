@@ -1,4 +1,3 @@
-import styles from "./styles.module.css"
 import {useInView} from "react-intersection-observer"
 import {animated, useSpring} from "react-spring"
 
@@ -15,11 +14,11 @@ export default function OverlappingText({classname, toptext, backgroundtext}: pr
   const fade= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 150});
   const fadetop= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 750});
 
-  return <div ref={ref} className={(classname?classname:"") + styles.textcontainer}>
-    <animated.div style={fadetop} className={styles.toptext}>
+  return <div ref={ref} className={(classname?classname:"") + "relative flex items-center justify-center text-center py-12 my-12"}>
+    <animated.div style={fadetop} className="text-end absolute font-bold text-md sm:text-3xl bottom-12 sm:bottom-16">
       {toptext}
     </animated.div>
-    <animated.div style={fade} className={styles.bottomtext}>
+    <animated.div style={fade} className="text-stone-600 font-black uppercase text-5xl sm:text-8xl md:text-9xl align-text-bottom sm:tracking-widest md:tracking-wide">
       {backgroundtext}
     </animated.div>
   </div>
