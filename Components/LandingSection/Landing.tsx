@@ -2,7 +2,6 @@
 import { animated, useSpring } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import Connect from '../Connect/Connect'
-import styles from "../../styles/home.module.css"
 
 const Landing = ()=>{
   const [ref, inView] = useInView({
