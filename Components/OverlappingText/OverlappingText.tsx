@@ -18,7 +18,7 @@ export default function OverlappingText({classname, toptext, backgroundtext}: pr
     <animated.div style={fadetop} className="text-end absolute font-bold text-md sm:text-3xl bottom-12 sm:bottom-16">
       {toptext}
     </animated.div>
-    <animated.div style={fade} className="text-slate-700 font-black uppercase text-5xl sm:text-8xl align-text-bottom tracking-widest">
+    <animated.div style={fade} className="text-stone-600 font-black uppercase text-5xl sm:text-8xl md:text-9xl align-text-bottom sm:tracking-widest md:tracking-wide">
       {backgroundtext}
     </animated.div>
   </div>

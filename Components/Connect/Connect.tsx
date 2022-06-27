@@ -1,4 +1,4 @@
-import styles from "./styles.module.css"
+import styles from "./connect.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import linkedin from "../../public/images/linkedin.png"
