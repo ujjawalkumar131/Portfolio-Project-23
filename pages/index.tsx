@@ -17,9 +17,11 @@ const Home: NextPage = () => {
           <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png"/>
           <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512x512.png"/>
       </Head>
-        <Landing/>
-        <About/>
-        <Projects/>
+        <div className="container mx-auto">
+          <Landing/>
+          <About/>
+          <Projects/>
+        </div>
     </>
   )
 }
