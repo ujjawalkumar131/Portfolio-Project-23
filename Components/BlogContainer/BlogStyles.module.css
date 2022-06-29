@@ -1,0 +1,35 @@
+/* the container for the blog, remember this is in combination with the tailwind containter class */
+.BlogContainer{
+  @apply mt-14 bg-neutral-900 p-12 rounded-lg;
+}
+/* everything should have a bit more space... its a blog afterall */
+.BlogContainer *{
+  @apply m-2;
+}
+/* The top level heading ie # */
+.BlogContainer h1{
+  @apply text-6xl font-black mb-6 text-neutral-200;
+}
+/* This is ok for lists... for now atleast */
+.BlogContainer li{
+  @apply list-disc;
+}
+/* For blocks ie > text */
+.BlogContainer blockquote{
+  @apply text-lg font-bold text-neutral-100 bg-stone-800 p-4 rounded-lg;
+}
+/* Common to all code blocks - Mono text and actual code */
+.BlogContainer code{
+  @apply  font-thin w-full h-max align-middle text-sky-500;
+}
+/* Next 2 are for all of the proper code blocks ie - ``` */
+.BlogContainer pre{
+  @apply flex w-full justify-center bg-sky-900 p-4 rounded-lg flex-wrap whitespace-pre-wrap;
+}
+.BlogContainer pre>code{
+  @apply text-white;
+}
+/* Most of the text */
+.BlogContainer>p{
+  @apply text-lg text-slate-200;
+}
