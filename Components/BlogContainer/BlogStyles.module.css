@@ -8,11 +8,11 @@
 }
 /* The top level heading ie # */
 .BlogContainer h1{
-  @apply text-6xl font-black mb-6 text-neutral-200;
+  @apply text-6xl font-black mb-6 text-neutral-200 underline;
 }
 /* This is ok for lists... for now atleast */
 .BlogContainer li{
-  @apply list-disc;
+  @apply list-outside font-bold;
 }
 /* For blocks ie > text */
 .BlogContainer blockquote{
@@ -24,10 +24,17 @@
 }
 /* Next 2 are for all of the proper code blocks ie - ``` */
 .BlogContainer pre{
-  @apply flex w-full justify-center bg-sky-900 p-4 rounded-lg flex-wrap whitespace-pre-wrap;
+  @apply flex w-full justify-center bg-slate-800 p-4 rounded-lg flex-wrap whitespace-pre-wrap relative hover:bg-slate-900 transition-colors duration-300;
 }
 .BlogContainer pre>code{
   @apply text-white;
+}
+.BlogContainer pre::after{
+  @apply absolute overflow-hidden top-0 right-0 m-2 bg-slate-500 text-white rounded-full py-1 px-2 text-sm transition-all duration-300;
+  content: "Code";
+}
+.BlogContainer pre:hover::after{
+  @apply w-0 h-0 p-0 top-2 right-2;
 }
 /* Most of the text */
 .BlogContainer>p{
