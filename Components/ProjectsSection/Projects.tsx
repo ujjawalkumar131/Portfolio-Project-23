@@ -26,7 +26,7 @@ export default function Projects() {
 				content={project1content}
 				github="https://github.com/lohit244/naps-website"
 				image={project1}
-				projecturl="https://github.com"
+				projecturl="https://naps-website.vercel.app"
 				title="Naps Website"
 				tags={["NextJs", "ExpressJs", "MongoDB", "Typescript"]}
 			/>
