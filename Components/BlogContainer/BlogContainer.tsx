@@ -1,9 +1,14 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import Head from "next/head";
+import { useInView } from "react-intersection-observer";
+import { animated, useSpring } from "react-spring";
 import styles from "./BlogStyles.module.css"
+
 export default function BlogContainer({ children, title }:{children: any, title:string}) {
+  const [ref, inView] = useInView()
+  const fade= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 250});
   return (
-    <div className={`${styles.BlogContainer} container mx-auto `}>
+    <animated.div ref={ref} style={fade} className={`${styles.BlogContainer} container mx-auto `}>
       <Head>
       <title>Lohitaksha | {title}</title>
       <meta name="description" content="Lohitaksha Malhotra's portfolio website" />
@@ -15,6 +20,6 @@ export default function BlogContainer({ children, title }:{children: any, title:
       <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512x512.png"/>
       </Head>
       {children}
-    </div>
+    </animated.div>
   );
 }
