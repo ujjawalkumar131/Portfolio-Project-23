@@ -16,7 +16,6 @@
 .BlogContainer ol{
   @apply list-decimal;
 }
-
 /* For blocks ie > text */
 .BlogContainer blockquote{
   @apply text-lg font-bold text-neutral-100 bg-stone-800 p-4 rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300;
@@ -45,7 +44,7 @@
 }
 /* Images */
 .BlogContainer img{
-  @apply w-full h-auto object-cover rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300;
+  @apply w-full h-auto object-cover rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300 mx-0;
 }
 /* Links */
 .BlogContainer a{
