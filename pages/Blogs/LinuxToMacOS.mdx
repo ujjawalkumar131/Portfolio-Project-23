@@ -1,0 +1,75 @@
+import BlogContainer from "../../Components/BlogContainer/BlogContainer";
+
+<BlogContainer title="Transitioning from Linux to MacOS">
+
+### Transitioning from Linux to MacOS
+
+> I've been using Linux on my laptop for two years now and recently switched from my old laptop to a Macbook Air M1. The hardware
+> is the best in class, and the integration with my iPad has been amazing, to say the least. But the workflow is very different.
+
+Here are the key differences:
+
+-   The hardware ( excellent )
+-   The software
+-   -   Window Mangement
+-   -   Terminal
+-   -   Apple Magic
+-   Final Words
+
+#### 1. The Hardware
+
+![Macbook air M1](/images/macbookairm1.jpg)
+
+In one word ... Great. The keyboard is so good that I can go without plugging in my custom mechanical keyboard. The trackpad is great, and the gestures work very well throughout the system. This is quite different from Linux where the trackpad has been a bit of a nuisance to get working well. There are multiple ways to configure the trackpad and each framework expects a different standard, this is a pain point on Linux in general that I didn't think would matter much but after using macOS, the difference is night and day.
+
+The performance is better than anything i've used, and the battery life is the same. I can go for an entire day on one charge with room to spare.
+
+#### 2. The Software
+
+I won't be able to sum this up in one word... The UNIX/BSD base helps out a lot. A bunch of my terminal utils work just as they would on Linux, and Apple Script has
+started to grow on me, but it will take a bit more time so I won't touch on that. The quirks of the os are things that I'll grow into eventually, but for now, I'll say that
+the dock is kind of stupid, and there is no obvious way to open a new safari/chrome window on another workspace. That is something that I've got scripts for, but it should just have a native solution.
+
+##### 2.1. Window Management
+
+![Macos Desktop](/images/macoswindowmanagement.png)
+
+This is painful. The window management on macOS by default is just painful, especially coming from Linux. I've been using window managers on Linux and it's the best window
+management I've ever used. But on macOS, Apple expects you to use the mouse for **everything** and it's frustrating. Chrome and electron-based apps can be full-screened by
+double clicking on the title bar but safari and other apple apps can't. Stage manager doesn't even fix this problem and the keyboard is stupidly useless for any kind
+of window management
+
+The accepted solution for this is magnets/rectangles/etc and even these feel like bandaid solutions at best. The only good window managers are
+[Amethyst](https://github.com/ianyh/Amethyst) which aims to be like [XMonad](https://xmonad.org) for macs and [Yabai](https://github.com/koekeishiya/yabai) which I found to be more like
+[BSPWM](https://github.com/baskerville/bspwm) and I haven't spent much time on either of those. My favorites were [Qtile](http://www.qtile.org) and [AwesomeWM](https://awesomewm.org)
+both of which I haven't found a comparable solution to yet.
+
+#### 2.2 Terminal
+
+![Macos Terminal](/images/macosterm.png)
+
+This is where MacOS wins me back. [Ranger](https://github.com/ranger/ranger), zsh, vim, [Btop](https://github.com/aristocratos/btop) and [Tmux](https://github.com/tmux/tmux)
+all work great out of the box. I was surprised most of my configs didn't need to be changed, and it all just worked the same as in Linux.
+
+The bad part is that macOS doesn't force me to use the terminal as much as Linux.. some people consider that a bad part of Linux but for me thats what I stuck with Linux for,
+and on macOS basically everything I would want to do can be done from the GUIs. So all it comes down to is that the terminal isn't weak at all but the GUIs on macOS are
+so much more _mature?_ for the lack of a better word, that I don't use the terminal as much as on Linux. On Linux, I did almost everything from the terminal and something from
+the GUI, and here it's the opposite almost.
+
+I still try to do a lot of what I do from the terminal and I think that's a good thing. My file management, package management, etc are all from the terminal and I never found
+myself to be as frustrated as I would be on windows, so I consider that a win.
+
+##### 2.3 Apple Magic
+
+![Apple ecosystem](/images/appleecosystem.jpg)
+
+These are things that Apple has been able to pull off because of the integration in their ecosystem. I have an iPad and a MacBook and being able to just slide my mouse from
+my MacBook to my iPad is amazing, Handoff works very reliably. Airdrop is awesome and these parts are what people stick with the Apple ecosystem for and I get it now. It's `awesome`
+
+#### Final Words
+
+MacOS isn't perfect, and neither is Linux or god forbid windows. But, the combination of this hardware and the software that macOS gets me is the best
+that I've seen and I'll be sticking to it for the next few years at least. The [Asahi Linux](https://asahilinux.org) guys have been doing some amazing things with Linux on
+apple silicon MacBooks and when that gets to a daily driver level, I'll try that and maybe I'll finally get the combination I want.
+
+</BlogContainer>

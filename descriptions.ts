@@ -1,7 +1,7 @@
 const data = [
-  {
-    name: "Test",
-    desc: "This is a project to display the capabilities of the blog template (mdx) with images, lists, and code blocks."
-  }
-]
+	{
+		name: "LinuxToMacOS",
+		desc: "My experience transitioning from linux to macos and my general experiences with the entire process.",
+	},
+];
 export default data;

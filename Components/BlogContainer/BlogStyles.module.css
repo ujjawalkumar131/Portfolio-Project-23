@@ -1,71 +1,75 @@
 /* the container for the blog, remember this is in combination with the tailwind containter class */
-.BlogContainer{
-  @apply mt-14 bg-neutral-900 p-12 rounded-lg;
+.BlogContainer {
+	@apply mt-14 bg-neutral-900 p-4 sm:p-8 md:p-12 rounded-lg;
 }
 /* everything should have a bit more space... its a blog afterall */
-.BlogContainer *{
-  @apply m-4;
+.BlogContainer * {
+	@apply m-4;
 }
 /* This is ok for lists... for now atleast */
-.BlogContainer li{
-  @apply font-bold list-inside;
+.BlogContainer li {
+	@apply font-bold list-outside;
 }
-.BlogContainer ul{
-  @apply list-none;
+.BlogContainer ul {
+	@apply list-disc;
 }
-.BlogContainer ol{
-  @apply list-decimal;
+.BlogContainer ol {
+	@apply list-decimal;
 }
 /* For blocks ie > text */
-.BlogContainer blockquote{
-  @apply text-lg font-bold text-neutral-100 bg-stone-800 p-4 rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300;
+.BlogContainer blockquote {
+	@apply text-lg font-bold text-neutral-100 bg-stone-800 p-4 rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300;
 }
 /* Common to all code blocks - Mono text and actual code */
-.BlogContainer code{
-  @apply  font-thin w-full h-max align-middle text-green-500;
+.BlogContainer code {
+	@apply font-thin w-full h-max text-green-500 m-2 align-top;
 }
 /* Next 2 are for all of the proper code blocks ie - ``` */
-.BlogContainer pre{
-  @apply flex w-full justify-center bg-slate-800 p-4 rounded-lg flex-wrap whitespace-pre-wrap relative hover:bg-slate-900 transition-colors duration-300 border-2 border-neutral-800;
+.BlogContainer pre {
+	@apply flex w-full justify-center bg-slate-800 p-4 rounded-lg flex-wrap whitespace-pre-wrap relative hover:bg-slate-900 transition-colors duration-300 border-2 border-neutral-800;
 }
-.BlogContainer pre>code{
-  @apply text-white slashed-zero;
+.BlogContainer pre > code {
+	@apply text-white slashed-zero;
 }
-.BlogContainer pre::after{
-  @apply absolute overflow-hidden top-0 right-0 m-2 bg-slate-500 text-white rounded-full py-1 px-2 text-sm transition-all duration-300;
-  content: "Code";
+.BlogContainer pre::after {
+	@apply absolute overflow-hidden top-0 right-0 m-2 bg-slate-500 text-white rounded-full py-1 px-2 text-sm transition-all duration-300;
+	content: "Code";
 }
-.BlogContainer pre:hover::after{
-  @apply w-0 h-0 top-4 right-4;
+.BlogContainer pre:hover::after {
+	@apply w-0 h-0 top-4 right-4;
 }
 /* Most of the text */
-.BlogContainer>p{
-  @apply text-lg text-white leading-relaxed subpixel-antialiased;
+.BlogContainer > p {
+	@apply text-lg text-white leading-relaxed subpixel-antialiased;
 }
 /* Images */
-.BlogContainer img{
-  @apply w-full h-auto object-cover rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300 mx-0;
+.BlogContainer img {
+	@apply w-full h-auto object-cover rounded-lg border-2 border-neutral-800 hover:border-neutral-600 transition-all duration-300 mx-0;
 }
 /* Links */
-.BlogContainer a{
-  @apply text-blue-500 underline cursor-pointer hover:text-blue-700 transition-colors duration-300 m-0;
+.BlogContainer a {
+	@apply text-blue-500 underline cursor-pointer hover:text-blue-700 transition-colors duration-300 m-0;
 }
 /* The top level heading ie # */
-.BlogContainer h1{
-  @apply text-6xl font-black mb-6 text-neutral-200 underline underline-offset-4;
+.BlogContainer h1 {
+	@apply text-6xl font-black mb-6 text-neutral-200 underline underline-offset-4;
 }
-.BlogContainer h2{
-  @apply text-5xl font-black mb-6 text-neutral-200 underline underline-offset-4;
+.BlogContainer h2 {
+	@apply text-5xl font-black mb-6 text-neutral-200 underline underline-offset-4;
 }
-.BlogContainer h3{
-  @apply text-4xl font-black mb-6 text-neutral-200 underline underline-offset-4;
+.BlogContainer h3 {
+	@apply text-4xl font-black mb-6 text-neutral-200 underline underline-offset-4;
 }
-.BlogContainer h4{
-  @apply text-3xl font-black mb-6 text-neutral-200 underline underline-offset-4;
+.BlogContainer h4 {
+	@apply text-2xl font-black mb-6 text-neutral-200 underline underline-offset-4;
 }
-.BlogContainer h5{
-  @apply text-2xl font-black mb-6 text-neutral-200 underline underline-offset-4;
+.BlogContainer h5 {
+	@apply text-xl font-black mb-6 text-neutral-200 underline underline-offset-4;
 }
-.BlogContainer h6{
-  @apply text-xl font-black mb-6 text-neutral-200 underline underline-offset-4;
+.BlogContainer h6 {
+	@apply text-lg font-black mb-6 text-neutral-200 underline underline-offset-4;
+}
+.BlogContainer strong,
+.BlogContainer em {
+	@apply m-0;
 }
