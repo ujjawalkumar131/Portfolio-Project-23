@@ -1,7 +1,7 @@
 const data = [
 	{
 		name: "LinuxToMacOS",
-		desc: "My experience transitioning from linux to macos and my general experiences with the entire process.",
+		desc: "I've been a linux user for the past ~2 years. Having recently switched over to macos, these are my experiences with the overall device and software.",
 	},
 ];
 export default data;
