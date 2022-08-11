@@ -26,7 +26,7 @@ export default function About() {
 				<div className="inline blue">
 					programming, web development and problem solving
 				</div>
-				. I use Macos, and have used Linux ({" "}
+				. I use MacOS, and have used Linux ({" "}
 				<div className="inline blue">Arch</div> btw ) as my main OS. I
 				am also a <div className="inline blue">Weeb</div> and a{" "}
 				<div className="inline blue">Gamer</div>.
