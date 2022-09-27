@@ -1,4 +1,4 @@
-import OverlappingText from "Components/OverlappingText/OverlappingText";
+import OverlappingText from "@/components/OverlappingText/OverlappingText";
 import ProjectCard from "./ProjectCard";
 import style from "./styles.module.css";
 import project1 from "public/images/naps.jpg";

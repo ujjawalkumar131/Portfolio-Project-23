@@ -1,6 +1,6 @@
-import OverlappingText from "Components/OverlappingText/OverlappingText";
+import OverlappingText from "@/components/OverlappingText/OverlappingText";
 import { GetStaticProps } from "next";
-import BlogCard from "Components/BlogContainer/BlogCard";
+import BlogCard from "@/components/BlogContainer/BlogCard";
 
 export default function AllBlogs({ paths }: { paths: string[] }) {
 	return (
@@ -19,7 +19,7 @@ export default function AllBlogs({ paths }: { paths: string[] }) {
 }
 export const getStaticProps: GetStaticProps = async () => {
 	const fs = require("fs");
-	const files = fs.readdirSync("./pages/Blogs/");
+	const files = fs.readdirSync("./src/pages/Blogs/");
 	return {
 		props: {
 			paths: files

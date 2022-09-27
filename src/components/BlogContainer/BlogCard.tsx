@@ -23,8 +23,7 @@ export default function BlogCard({ path }: { path: string }) {
 				</a>
 			</Link>
 			<div className="px-8 pt-2 w-64 mx-auto text-center mt-2">
-				{data.filter((d) => d.name == path)[0]?.desc ||
-					"No description"}
+				{data.filter((d) => d.name == path)[0]?.desc || "No description"}
 			</div>
 		</animated.div>
 	);
