@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import kvpair from "@/utils/kvpair";
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+const handle = (req: NextApiRequest, res: NextApiResponse) => {
   const { slug } = req.query;
   if (!slug || typeof slug !== "string") {
     res.status(400).send("Invalid query");
@@ -12,6 +12,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
   const url = kvpair.get(slug);
-  res.status(200).send(url);
+  res.status(200).json({ url: url });
   return;
 };
+export default handle;

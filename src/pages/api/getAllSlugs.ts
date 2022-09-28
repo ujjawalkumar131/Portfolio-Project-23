@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import kvpair from "@/utils/kvpair";
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+const handle = (req: NextApiRequest, res: NextApiResponse) => {
   const { password } = req.query;
   if (
     !password ||
@@ -21,3 +21,4 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   });
   res.status(200).json(ans);
 };
+export default handle;
