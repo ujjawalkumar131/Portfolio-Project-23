@@ -1,14 +1,14 @@
+import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ShortyHome: NextPage = () => {
   const [badSlug, setBadSlug] = useState<boolean>(false);
   const [badUrl, setBadUrl] = useState<boolean>(false);
   const [slug, setSlug] = useState<string>("");
   const [url, setUrl] = useState<string>("");
-  const router = useRouter();
+  const addSlug = trpc.shorty.addSlug.useMutation();
   const handleSubmit = () => {
     setBadUrl(false);
     setBadSlug(false);
@@ -37,10 +37,9 @@ const ShortyHome: NextPage = () => {
       setBadUrl(true);
     }
     if (submit) {
-      fetch(`/api/addSlug?slug=${slug}&url=${url}`).then((res) => {
-        if (res.status == 200) {
-          router.push(`/shorty/${slug}`);
-        }
+      addSlug.mutate({
+        slug: slug,
+        url: url,
       });
     }
   };
@@ -83,35 +82,35 @@ const ShortyHome: NextPage = () => {
       </Head>
       <div className="my-8">
         <form
-          className="flex flex-col w-1/2 mx-auto gap-2"
+          className="mx-auto flex w-1/2 flex-col gap-2"
           onSubmit={(e) => {
             e.preventDefault();
             handleSubmit();
           }}
         >
-          <label htmlFor="slug" className="text-stone-400 font-bold">
+          <label htmlFor="slug" className="font-bold text-stone-400">
             Slug
           </label>
           <input
             type="text"
             id="slug"
-            className={`rounded-md outline-none text-white bg-black border-2 ${
+            className={`rounded-md border-2 bg-black text-white outline-none ${
               badSlug ? "border-red-400" : "border-sky-500"
-            } text-xl font-semibold px-2 py-2`}
+            } px-2 py-2 text-xl font-semibold`}
             placeholder="coolwebsite"
             onChange={(e) => {
               setSlug(e.target.value);
             }}
           />
-          <label htmlFor="url" className="text-stone-400 font-bold">
+          <label htmlFor="url" className="font-bold text-stone-400">
             Url
           </label>
           <input
             type="text"
             id="url"
-            className={`rounded-md outline-none text-white bg-black border-2 ${
+            className={`rounded-md border-2 bg-black text-white outline-none ${
               badUrl ? "border-red-400" : "border-sky-500"
-            } text-xl font-semibold px-2 py-2`}
+            } px-2 py-2 text-xl font-semibold`}
             placeholder="https://yourwebsite.com"
             onChange={(e) => {
               setUrl(e.target.value);
@@ -119,7 +118,7 @@ const ShortyHome: NextPage = () => {
           />
           <button
             type="submit"
-            className="bg-black text-white font-bold rounded-md px-4 py-2 text-2xl border-2 border-sky-500 mt-4"
+            className="mt-4 rounded-md border-2 border-sky-500 bg-black px-4 py-2 text-2xl font-bold text-white"
           >
             Create Link
           </button>

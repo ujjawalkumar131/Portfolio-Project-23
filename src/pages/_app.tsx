@@ -1,10 +1,11 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import NextNProgress from "nextjs-progressbar";
+import type { AppType } from "next/dist/shared/lib/utils";
+import { trpc } from "../utils/trpc";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
       <Header />
@@ -13,6 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Footer />
     </>
   );
-}
+};
 
-export default MyApp;
+export default trpc.withTRPC(MyApp);
