@@ -1,39 +1,30 @@
 import OverlappingText from "@/components/OverlappingText/OverlappingText";
+import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 const Slug: NextPage = () => {
   const router = useRouter();
-  const [url, setUrl] = useState<string>("");
-  const [error, setError] = useState<boolean>(false);
-  useEffect(() => {
-    const slug = router.query.slug;
-    if (!slug) {
-      return;
-    }
-    fetch(`/api/getSlug?slug=${slug}`)
-      .then((res) => {
-        if (res.status == 200) return res.json();
-        else {
-          setError(true);
-          return { url: "" };
-        }
-      })
-      .then((data: { url: string }) => {
-        setUrl(data.url);
-      });
-  }, [router]);
-
-  useEffect(() => {
-    if (url != "") {
-      setTimeout(() => {
-        router.push(url);
-      }, 1500);
-    }
-  }, [url, router]);
-
+  const slug = router.query.slug;
+  if (!slug || typeof slug != "string") {
+    return (
+      <>
+        <div className="px-auto mx-auto text-center text-2xl font-bold text-white">
+          Invalid URL
+        </div>
+      </>
+    );
+  }
+  const q = trpc.shorty.getSlug.useQuery({
+    slug: slug,
+  });
+  if (!q.isLoading && q.data && q.data.url) {
+    const t = q.data.url;
+    setTimeout(() => {
+      router.push(t);
+    }, 1500);
+  }
   return (
     <>
       <Head>
@@ -75,12 +66,14 @@ const Slug: NextPage = () => {
         />
       </Head>
       <div className="h-screen py-8">
-        <OverlappingText
-          toptext={!error ? `On the way to ${url}` : `Wrong url`}
-          backgroundtext={!error ? "Redirecting" : "Error"}
-          startTime={0}
-          stagger={800}
-        />
+        {
+          <OverlappingText
+            toptext={q.data?.url ? `On the way to ${q.data.url}` : `Wrong url`}
+            backgroundtext={q.data?.url ? "Redirecting" : "Error"}
+            startTime={0}
+            stagger={800}
+          />
+        }
       </div>
     </>
   );

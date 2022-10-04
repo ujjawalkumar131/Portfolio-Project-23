@@ -1,7 +1,9 @@
 import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+// TODO: Add modal with addSlug.data?.text
 
 const ShortyHome: NextPage = () => {
   const [badSlug, setBadSlug] = useState<boolean>(false);
@@ -89,7 +91,7 @@ const ShortyHome: NextPage = () => {
           }}
         >
           <label htmlFor="slug" className="font-bold text-stone-400">
-            Slug
+            {slug == "" ? "Slug" : `lohit244.netlify.app/${slug}`}
           </label>
           <input
             type="text"

@@ -14,14 +14,12 @@ export const shortyrouter = t.router({
       })
     )
     .mutation(async ({ input, ctx }) => {
-      console.log("foo");
       const exists = await ctx.prisma.links.findFirst({
         where: {
           slug: input.slug,
         },
       });
       if (exists) {
-        console.log(exists);
         return {
           text: "Slug Already Exists",
         };
@@ -33,7 +31,21 @@ export const shortyrouter = t.router({
         },
       });
       return {
-        text: `Created slug ${input.slug} pointing to url ${input.url}`,
+        text: `Created slug ${input.slug}`,
       };
+    }),
+  getSlug: t.procedure
+    .input(
+      z.object({
+        slug: z.string().min(1).regex(slugreg),
+      })
+    )
+    .query(async ({ input, ctx }) => {
+      const find = await ctx.prisma.links.findFirst({
+        where: {
+          slug: input.slug,
+        },
+      });
+      if (find) return find;
     }),
 });
