@@ -3,15 +3,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 
-// TODO: Add modal with addSlug.data?.text
-
 const ShortyHome: NextPage = () => {
   const [badSlug, setBadSlug] = useState<boolean>(false);
   const [badUrl, setBadUrl] = useState<boolean>(false);
   const [slug, setSlug] = useState<string>("");
   const [url, setUrl] = useState<string>("");
   const addSlug = trpc.shorty.addSlug.useMutation();
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setBadUrl(false);
     setBadSlug(false);
     var submit = true;
@@ -83,8 +81,23 @@ const ShortyHome: NextPage = () => {
         />
       </Head>
       <div className="my-8">
+        {addSlug.data?.text && (
+          <div className="absolute z-10 flex h-max w-full flex-col items-center rounded-md bg-slate-900/90 p-10 text-2xl font-bold">
+            <p>{addSlug.data?.text}</p>
+            <button
+              className="mx-auto mt-4 justify-center rounded-md bg-gray-600 px-2 text-lg font-light"
+              onClick={() => {
+                addSlug.reset();
+              }}
+            >
+              Close
+            </button>
+          </div>
+        )}
         <form
-          className="mx-auto flex w-1/2 flex-col gap-2"
+          className={`mx-auto flex w-1/2 flex-col gap-2 ${
+            addSlug.data?.text ? "blur-md" : ""
+          }`}
           onSubmit={(e) => {
             e.preventDefault();
             handleSubmit();
