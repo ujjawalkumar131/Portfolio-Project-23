@@ -6,18 +6,12 @@ import { animated, useSpring } from "react-spring";
 export default function About() {
   const [ref, inView] = useInView({
     threshold: 0.1,
+    triggerOnce: true,
   });
 
-  const [hasRun, setHasRun] = useState(false);
-  useEffect(() => {
-    if (inView && !hasRun) {
-      setHasRun(true);
-    }
-  }, [inView]);
-
   const fade = useSpring({
-    y: hasRun ? 0 : 20,
-    opacity: hasRun ? 1 : 0,
+    y: inView ? 0 : 20,
+    opacity: inView ? 1 : 0,
     delay: 400,
   });
 

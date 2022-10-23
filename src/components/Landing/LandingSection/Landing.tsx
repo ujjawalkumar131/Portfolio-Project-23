@@ -6,18 +6,12 @@ import { useEffect, useState } from "react";
 const Landing = () => {
   const [ref, inView] = useInView({
     threshold: 0.2,
+    triggerOnce: true,
   });
 
-  const [hasRun, setHasRun] = useState(false);
-  useEffect(() => {
-    if (inView && !hasRun) {
-      setHasRun(true);
-    }
-  }, [inView]);
-
   const fade = useSpring({
-    x: hasRun ? 0 : 20,
-    opacity: hasRun ? 1 : 0,
+    x: inView ? 0 : 20,
+    opacity: inView ? 1 : 0,
     delay: 100,
   });
   return (

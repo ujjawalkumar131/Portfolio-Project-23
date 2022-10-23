@@ -6,14 +6,10 @@ import { animated, useSpring } from "react-spring";
 import styles from "./BlogStyles.module.css"
 
 export default function BlogContainer({ children, title }:{children: any, title:string}) {
-  const [ref, inView] = useInView()
-  const [hasRun, setHasRun] = useState(false);
-  useEffect(() => {
-    if (inView && !hasRun) {
-      setHasRun(true);
-    }
-  }, [inView]);
-  const fade= useSpring({y: hasRun?0:20, opacity: hasRun?1:0, delay: 250});
+  const [ref, inView] = useInView({
+  triggerOnce: true
+  })
+  const fade= useSpring({y: inView?0:20, opacity: inView?1:0, delay: 250});
   return (
     <animated.div ref={ref} style={fade} className={`${styles.BlogContainer} container mx-auto `}>
       <Head>
