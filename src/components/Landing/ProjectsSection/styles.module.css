@@ -2,68 +2,68 @@
   margin: 5% 7%;
 }
 .CardContainer{
-  margin: 5% 0;
-  display: flex;
-  flex-direction: row;
   gap: 4%;
+  @apply border border-black px-4 py-4 rounded-md relative z-20 flex flex-row backdrop-blur-lg transition-all duration-700;
+}
+.CardContainer:hover{
+  @apply border-white/30
+}
+.CardContainer:hover::before{
+  opacity: 1;
+}
+.CardContainer::before{
+  opacity:0;
+  transition: opacity ease-in-out 500ms;
+  background: radial-gradient(
+  40rem circle at var(--circle-x) var(--circle-y),
+  rgba(200,200,255,0.4),
+  transparent 40%
+  );
+  content: "";
+  border-radius: inherit;
+  height:100%;
+  width:100%;
+  @apply -z-10 absolute h-full w-full left-0 top-0
 }
 .imageContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30vw;
-  position: relative;
+  @apply flex justify-center items-center relative w-96;
 }
 .imageContainer img{
-  border-radius: 1rem;
-  object-fit: cover;
+  @apply object-cover rounded-md
 }
 .title{
   font-size: clamp(1.6rem,4vw,4rem);
   font-weight: 800;
 }
 .tags{
-  display: flex;
-  width: 100%;
-  padding: 2%;
-  gap: 3ch;
-  flex-wrap: wrap;
+  @apply flex w-full p-2 gap-[3ch] flex-wrap
 }
 .tag{
   padding: 1% 2%;
   transition: transform ease-in-out 400ms;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.4ch;
-  width: max-content
+  @apply px-2 py-2 flex text-center items-center justify-center rounded-sm w-max border-2 backdrop-blur-md backdrop-brightness-0;
 }
 .tag:hover{
   transform: rotate(-15deg);
 }
 .tag:nth-child(1){
-  @apply bg-orange-700;
+  @apply border-orange-700;
 }
 .tag:nth-child(2){
-  @apply bg-blue-700;
+  @apply border-blue-700;
 }
 .tag:nth-child(3){
-  @apply bg-green-700;
+  @apply border-green-700;
 }
 .tag:nth-child(4){
-  @apply bg-purple-700;
+  @apply border-purple-700;
 }
 .tag:nth-child(5){
-  @apply bg-slate-700;
+  @apply border-slate-700;
 }
 .right{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   gap: 4%;
+  @apply flex flex-col items-center content-center w-full
 }
 .content{
   font-size: clamp(1rem, 2vw,1.4rem);
@@ -85,6 +85,7 @@
   outline: 2px solid rgb(25, 128, 188);
   padding: 1ch 2ch;
   overflow: hidden;
+  @apply backdrop-brightness-0;
 }
 .github::after{
   content: "";
@@ -106,6 +107,7 @@
   padding: 1ch 4ch;
   border-radius: 0.4ch;
   cursor: pointer;
+  @apply backdrop-brightness-0;
 }
 .projectUrl::after{
   content: "";
