@@ -104,7 +104,7 @@ const ShortyHome: NextPage = () => {
           }}
         >
           <label htmlFor="slug" className="font-bold text-stone-400">
-            {slug == "" ? "Slug" : `lohit244.netlify.app/${slug}`}
+            {slug == "" ? "Slug" : `lohitaksha.com/shorty/${slug}`}
           </label>
           <input
             type="text"
