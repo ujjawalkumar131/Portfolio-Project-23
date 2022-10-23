@@ -2,6 +2,7 @@ import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
+
 const ShortyHome: NextPage = () => {
   const [badSlug, setBadSlug] = useState<boolean>(false);
   const [badUrl, setBadUrl] = useState<boolean>(false);

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "react-spring";
 
@@ -18,14 +19,20 @@ export default function OverlappingText({
   const [ref, inView] = useInView({
     threshold: 0.4,
   });
+  const [hasRun, setHasRun] = useState(false);
+  useEffect(() => {
+    if (inView && !hasRun) {
+      setHasRun(true);
+    }
+  }, [inView]);
   const fade = useSpring({
-    y: inView ? 0 : 20,
-    opacity: inView ? 1 : 0,
+    y: hasRun ? 0 : 20,
+    opacity: hasRun ? 1 : 0,
     delay: startTime,
   });
   const fadetop = useSpring({
-    y: inView ? 0 : 20,
-    opacity: inView ? 1 : 0,
+    y: hasRun ? 0 : 20,
+    opacity: hasRun ? 1 : 0,
     delay: startTime + stagger,
   });
 
@@ -34,18 +41,18 @@ export default function OverlappingText({
       ref={ref}
       className={
         (classname ? classname : "") +
-        "relative flex items-center justify-center text-center py-12 my-12"
+        "relative my-12 flex items-center justify-center py-12 text-center"
       }
     >
       <animated.div
         style={fadetop}
-        className="text-end absolute font-bold text-md sm:text-3xl bottom-12 sm:bottom-16"
+        className="text-md absolute bottom-12 text-end font-bold sm:bottom-16 sm:text-3xl"
       >
         {toptext}
       </animated.div>
       <animated.div
         style={fade}
-        className="text-stone-600 font-black uppercase text-5xl sm:text-8xl md:text-9xl align-text-bottom sm:tracking-widest md:tracking-wide"
+        className="align-text-bottom text-5xl font-black uppercase text-stone-600 sm:text-8xl sm:tracking-widest md:text-9xl md:tracking-wide"
       >
         {backgroundtext}
       </animated.div>

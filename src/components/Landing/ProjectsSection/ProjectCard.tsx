@@ -3,6 +3,7 @@ import Link from "next/link"
 import styles from "./styles.module.css"
 import {useInView} from "react-intersection-observer"
 import {animated, useSpring} from "react-spring"
+import { useEffect, useState } from "react"
 
 type props = {
   image: StaticImageData,
@@ -19,8 +20,17 @@ export default function ProjectCard({image, title, content, github, projecturl, 
   const [ref, inView] = useInView({
     threshold: 0.4
   })
-  const fadeImage= useSpring({x: inView?0:20, opacity: inView?1:0, delay: 450});
-  const fade= useSpring({x: inView?0:20, opacity: inView?1:0, delay: 150});
+
+
+  const [hasRun, setHasRun] = useState(false);
+  useEffect(() => {
+    if (inView && !hasRun) {
+      setHasRun(true);
+    }
+  }, [inView]);
+
+  const fadeImage= useSpring({x: hasRun?0:20, opacity: hasRun?1:0, delay: 450});
+  const fade= useSpring({x: hasRun?0:20, opacity: hasRun?1:0, delay: 150});
   return (
     <div ref={ref} className={styles.CardContainer} style={reverse?{flexDirection: "row-reverse"}:{flexDirection: "row"}}>
       <animated.div style={fadeImage} className={styles.imageContainer}>
