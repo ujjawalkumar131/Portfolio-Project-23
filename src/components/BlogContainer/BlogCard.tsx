@@ -2,7 +2,6 @@ import Link from "next/link";
 import data from "../../descriptions";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "react-spring";
-import { useEffect, useState } from "react";
 
 export default function BlogCard({ path }: { path: string }) {
   const [ref, inView] = useInView({

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "react-spring";
 import styles from "./BlogStyles.module.css"

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "react-spring";
 

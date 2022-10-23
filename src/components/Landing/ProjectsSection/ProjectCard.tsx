@@ -3,7 +3,6 @@ import Link from "next/link"
 import styles from "./styles.module.css"
 import {useInView} from "react-intersection-observer"
 import {animated, useSpring} from "react-spring"
-import { useEffect, useState } from "react"
 
 type props = {
   image: StaticImageData,
