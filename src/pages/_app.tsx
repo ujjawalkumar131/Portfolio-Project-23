@@ -3,7 +3,6 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import NextNProgress from "nextjs-progressbar";
 import type { AppType } from "next/dist/shared/lib/utils";
-import { trpc } from "../utils/trpc";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -16,4 +15,4 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   );
 };
 
-export default trpc.withTRPC(MyApp);
+export default MyApp;
