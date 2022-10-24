@@ -7,4 +7,4 @@ favorite for too long.
 
 The blogs are handled with mdx in the pages/Blogs directory, and the descriptions for said blogs are in the descriptions.ts file in the root dir.
 
-It is hosted on [Netlify](https://lohit244.netlify.app) and when working on thing, i'll use [Vercel](https://lohit244.vercel.app) as the test deployment.
+It is hosted on [Here](https://lohitaksha.com) with vercel.
