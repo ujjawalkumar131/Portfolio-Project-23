@@ -45,7 +45,7 @@ export default function ProjectCard({
       style={
         reverse ? { flexDirection: "row-reverse" } : { flexDirection: "row" }
       }
-      onMouseMove={(e) => {
+      onMouseMove={async (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
