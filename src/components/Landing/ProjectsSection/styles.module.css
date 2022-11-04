@@ -1,75 +1,75 @@
-.Projects{
+.Projects {
   margin: 5% 7%;
 }
-.CardContainer{
+.CardContainer {
   gap: 4%;
-  @apply border border-black px-4 py-4 rounded-md relative z-20 flex flex-row backdrop-blur-lg transition-all duration-700;
+  @apply relative z-20 flex flex-row rounded-md border border-black px-4 py-4 backdrop-blur-lg transition-all duration-700;
 }
-.CardContainer:hover{
-  @apply border-white/30
+.CardContainer:hover {
+  @apply border-white/30;
 }
-.CardContainer:hover::before{
+.CardContainer:hover::before {
   opacity: 1;
 }
-.CardContainer::before{
-  opacity:0;
+.CardContainer::before {
+  opacity: 0;
   transition: opacity ease-in-out 500ms;
   background: radial-gradient(
-  40rem circle at var(--circle-x) var(--circle-y),
-  rgba(200,200,255,0.4),
-  transparent 40%
+    40rem circle at var(--circle-x) var(--circle-y),
+    rgba(200, 200, 255, 0.4),
+    transparent 40%
   );
   content: "";
   border-radius: inherit;
-  height:100%;
-  width:100%;
-  @apply -z-10 absolute h-full w-full left-0 top-0
+  height: 100%;
+  width: 100%;
+  @apply absolute left-0 top-0 -z-10 h-full w-full;
 }
-.imageContainer{
-  @apply flex justify-center items-center relative w-96;
+.imageContainer {
+  @apply relative flex w-96 items-center justify-center;
 }
-.imageContainer img{
-  @apply object-cover rounded-md
+.imageContainer img {
+  @apply rounded-md object-cover;
 }
-.title{
-  font-size: clamp(1.6rem,4vw,4rem);
+.title {
+  font-size: clamp(1.6rem, 4vw, 4rem);
   font-weight: 800;
 }
-.tags{
-  @apply flex w-full p-2 gap-[3ch] flex-wrap
+.tags {
+  @apply flex w-full flex-wrap gap-[3ch] p-2;
 }
-.tag{
+.tag {
   padding: 1% 2%;
   transition: transform ease-in-out 400ms;
-  @apply px-2 py-2 flex text-center items-center justify-center rounded-sm w-max border-2 backdrop-blur-md backdrop-brightness-0;
+  @apply flex w-max items-center justify-center rounded-md border-2 px-2 py-2 text-center backdrop-blur-md backdrop-brightness-0;
 }
-.tag:hover{
-  transform: rotate(-15deg);
-}
-.tag:nth-child(1){
+/* .tag:hover{ */
+/*   transform: rotate(-15deg); */
+/* } */
+.tag:nth-child(1) {
   @apply border-orange-700;
 }
-.tag:nth-child(2){
+.tag:nth-child(2) {
   @apply border-blue-700;
 }
-.tag:nth-child(3){
+.tag:nth-child(3) {
   @apply border-green-700;
 }
-.tag:nth-child(4){
+.tag:nth-child(4) {
   @apply border-purple-700;
 }
-.tag:nth-child(5){
+.tag:nth-child(5) {
   @apply border-slate-700;
 }
-.right{
+.right {
   gap: 4%;
-  @apply flex flex-col items-center content-center w-full
+  @apply flex w-full flex-col content-center items-center;
 }
-.content{
-  font-size: clamp(1rem, 2vw,1.4rem);
+.content {
+  font-size: clamp(1rem, 2vw, 1.4rem);
   text-align: left;
 }
-.links{
+.links {
   margin-top: 5%;
   font-size: 1.2rem;
   display: flex;
@@ -78,7 +78,7 @@
   width: 100%;
   color: rgb(25, 128, 188);
 }
-.github{
+.github {
   cursor: pointer;
   position: relative;
   border-radius: 0.4ch;
@@ -87,21 +87,21 @@
   overflow: hidden;
   @apply backdrop-brightness-0;
 }
-.github::after{
+.github::after {
   content: "";
   position: absolute;
-  top:-100%;
-  left:-90%;
+  top: -100%;
+  left: -90%;
   width: 0%;
   height: 400%;
   background-color: rgb(25, 128, 188);
   transform: rotate(35deg);
   cursor: pointer;
 }
-.github:hover::after{
+.github:hover::after {
   animation: githublinkanimation 800ms infinite;
 }
-.projectUrl{
+.projectUrl {
   outline: 2px solid rgb(25, 128, 188);
   position: relative;
   padding: 1ch 4ch;
@@ -109,7 +109,7 @@
   cursor: pointer;
   @apply backdrop-brightness-0;
 }
-.projectUrl::after{
+.projectUrl::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -120,57 +120,57 @@
   left: 0;
   transition: all 400ms ease-in-out;
 }
-.projectUrl:hover::after{
+.projectUrl:hover::after {
   top: -15%;
   left: 10%;
   animation: projlinkanimation 1s ease-in-out infinite;
 }
-@media (max-width: 940px){
-  .CardContainer{
+@media (max-width: 940px) {
+  .CardContainer {
     padding: 3%;
     flex-direction: column !important;
     align-items: center;
   }
-  .imageContainer{
+  .imageContainer {
     width: 60vw;
   }
 }
-@media(max-width: 800px){
-  .github::after{
+@media (max-width: 800px) {
+  .github::after {
     animation: githublinkanimation 800ms infinite;
   }
 }
 @keyframes githublinkanimation {
   0% {
-    left:-90%;
+    left: -90%;
     width: 0%;
   }
   30% {
     left: 0%;
     width: 15%;
   }
-  50%{
+  50% {
     left: 40%;
     width: 25%;
   }
-  70%{
+  70% {
     left: 80%;
     width: 15%;
   }
-  100%{
+  100% {
     left: 100%;
     width: 0%;
   }
 }
 
-@keyframes projlinkanimation{
-  0%{
-    transform: translate(0,0);
+@keyframes projlinkanimation {
+  0% {
+    transform: translate(0, 0);
   }
-  50%{
-    transform: translate(-2%,3%);
+  50% {
+    transform: translate(-2%, 3%);
   }
-  100%{
-    transform: translate(0,0);
+  100% {
+    transform: translate(0, 0);
   }
 }
