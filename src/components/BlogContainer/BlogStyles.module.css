@@ -1,6 +1,6 @@
 /* the container for the blog, remember this is in combination with the tailwind containter class */
 .BlogContainer {
-  @apply mt-14 rounded-lg bg-neutral-900 p-4 sm:p-8 md:w-10/12 md:p-12 lg:w-8/12;
+  @apply mt-14 rounded-lg bg-neutral-900 p-4 text-justify sm:p-8 md:w-10/12 md:p-12 lg:w-8/12;
 }
 /* everything should have a bit more space... its a blog afterall */
 .BlogContainer * {
@@ -22,7 +22,7 @@
 }
 /* Common to all code blocks - Mono text and actual code */
 .BlogContainer code {
-  @apply m-2 h-max w-full align-top font-thin text-green-500;
+  @apply m-2 mx-0 h-max w-full align-top font-thin text-green-500;
 }
 /* Next 2 are for all of the proper code blocks ie - ``` */
 .BlogContainer pre {
@@ -32,11 +32,12 @@
   @apply slashed-zero text-white;
 }
 .BlogContainer pre::after {
+  --text: "Code";
   @apply absolute top-0 right-0 m-2 overflow-hidden rounded-full bg-slate-500 py-1 px-2 text-sm text-white transition-all duration-300;
-  content: "Code";
+  content: var(--text);
 }
 .BlogContainer pre:hover::after {
-  @apply top-4 right-4 h-0 w-0;
+  @apply bg-slate-700;
 }
 /* Most of the text */
 .BlogContainer > p {

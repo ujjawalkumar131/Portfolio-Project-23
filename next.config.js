@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const withMDX = require('@next/mdx')({
+const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
@@ -7,12 +7,12 @@ const withMDX = require('@next/mdx')({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
-})
+});
 // const nextConfig = {
 //   reactStrictMode: true,
 // }
 
 // module.exports = nextConfig
 module.exports = withMDX({
-  pageExtensions: ['js', 'jsx','ts','tsx', 'md', 'mdx'],
-})
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+});
