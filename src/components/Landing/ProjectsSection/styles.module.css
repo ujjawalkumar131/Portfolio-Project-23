@@ -135,11 +135,6 @@
     width: 60vw;
   }
 }
-@media (max-width: 800px) {
-  .github::after {
-    animation: githublinkanimation 800ms infinite;
-  }
-}
 @keyframes githublinkanimation {
   0% {
     left: -90%;
