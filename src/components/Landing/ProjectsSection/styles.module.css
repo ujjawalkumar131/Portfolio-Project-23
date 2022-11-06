@@ -3,7 +3,7 @@
 }
 .CardContainer {
   gap: 4%;
-  @apply relative z-20 flex flex-row rounded-md border border-black px-4 py-4 backdrop-blur-lg transition-all duration-700;
+  @apply relative z-20 flex h-max flex-row overflow-hidden rounded-md border border-black px-4 py-4 backdrop-blur-lg transition-all duration-700;
 }
 .CardContainer:hover {
   @apply border-white/30;
@@ -13,14 +13,14 @@
 }
 .CardContainer::before {
   opacity: 0;
-  transition: opacity ease-in-out 500ms;
+  transition: opacity ease-in-out 400ms;
   background: radial-gradient(
-    40rem circle at var(--circle-x) var(--circle-y),
+    30rem circle,
     rgba(200, 200, 255, 0.4),
     transparent 40%
   );
+  background-position: 0 0;
   content: "";
-  border-radius: inherit;
   height: 100%;
   width: 100%;
   @apply absolute left-0 top-0 -z-10 h-full w-full;

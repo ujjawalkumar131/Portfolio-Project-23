@@ -47,10 +47,18 @@ export default function ProjectCard({
       }
       onMouseMove={async (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
+        const w = rect.right - rect.left;
+        const h = rect.bottom - rect.top;
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        e.currentTarget.style.setProperty("--circle-x", `${x}px`);
-        e.currentTarget.style.setProperty("--circle-y", `${y}px`);
+        e.currentTarget.animate(
+          { translate: `${x-w/2}px ${y-h/2}px` },
+          {
+            duration: 400,
+            fill: "forwards",
+            pseudoElement: "::before",
+          }
+        );
       }}
     >
       <animated.div style={fadeImage} className={styles.imageContainer}>
