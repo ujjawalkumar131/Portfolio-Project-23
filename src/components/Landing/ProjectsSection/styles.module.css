@@ -62,7 +62,6 @@
   @apply border-slate-700;
 }
 .right {
-  gap: 4%;
   @apply flex w-full flex-col content-center items-center;
 }
 .content {
