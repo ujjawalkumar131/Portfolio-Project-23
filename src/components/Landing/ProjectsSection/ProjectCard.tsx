@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "react-spring";
+import { useEffect, useState } from "react";
 
 type props = {
   image: StaticImageData;
@@ -28,6 +29,12 @@ export default function ProjectCard({
     triggerOnce: true,
   });
 
+  const [isMobile, setisMobile] = useState(false);
+
+  useEffect(() => {
+    setisMobile(window.innerWidth < 768);
+  }, []);
+
   const fadeImage = useSpring({
     x: inView ? 0 : 20,
     opacity: inView ? 1 : 0,
@@ -38,6 +45,7 @@ export default function ProjectCard({
     opacity: inView ? 1 : 0,
     delay: 150,
   });
+
   return (
     <div
       ref={ref}
@@ -46,20 +54,25 @@ export default function ProjectCard({
         reverse ? { flexDirection: "row-reverse" } : { flexDirection: "row" }
       }
       onMouseMove={async (e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const w = rect.right - rect.left;
-        const h = rect.bottom - rect.top;
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        e.currentTarget.animate(
-          { translate: `${x-w/2}px ${y-h/2}px` },
-          {
-            duration: 400,
-            fill: "forwards",
-            pseudoElement: "::before",
-          }
-        );
-      }}
+        if (!isMobile) {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const w = rect.right - rect.left;
+          const h = rect.bottom - rect.top;
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          e.currentTarget.animate(
+            { translate: `${x - w / 2}px ${y - h / 2}px` },
+            {
+              duration: 400,
+              fill: "forwards",
+              pseudoElement: "::before",
+            }
+          );
+        } else {
+          //nothing
+        }
+      }
+      }
     >
       <animated.div style={fadeImage} className={styles.imageContainer}>
         <Image src={image} alt="project screenshot" />
