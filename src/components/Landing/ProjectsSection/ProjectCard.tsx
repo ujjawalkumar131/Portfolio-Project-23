@@ -33,6 +33,16 @@ export default function ProjectCard({
 
   useEffect(() => {
     setisMobile(window.innerWidth < 768);
+    // set listener for window resize
+    const t = () => {
+      setisMobile(window.innerWidth < 768);
+    }
+    window.addEventListener("resize", t);
+    // remove listener on unmount
+    return () => {
+      window.removeEventListener("resize", t);
+    };
+
   }, []);
 
   const fadeImage = useSpring({
