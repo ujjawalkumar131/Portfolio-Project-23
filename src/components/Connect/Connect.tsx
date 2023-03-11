@@ -34,7 +34,7 @@ const Connect = () => {
         </Link>
       </animated.div>
       <animated.div style={fade}>
-        <Link href="/" passHref>
+        <Link href="\Ujjawalkumar.pdf" passHref>
           <div className="text-2xl px-4 py-1 bg-white text-black rounded-lg font-bold cursor-pointer">
             Click here for Resume
           </div>

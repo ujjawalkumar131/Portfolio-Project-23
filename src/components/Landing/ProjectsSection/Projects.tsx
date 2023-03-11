@@ -24,7 +24,7 @@ export default function Projects() {
       <div className="a10vhgap"></div>
       <ProjectCard
         content={project1content}
-        github="https://github.com/lohit244/naps-website"
+        github="https://github.com/ujjawalkumar131/NAPS-Website"
         image={project1}
         projecturl="https://naps-website.vercel.app"
         title="Naps Website"
