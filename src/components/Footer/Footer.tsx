@@ -9,7 +9,7 @@ export default function Footer() {
         toptext="Wanna Reach Out?"
         startTime={300}
       />
-      <Connect />© 2022 Lohitaksha Malhotra
+      <Connect />© 2023 Ujjawal Kumar
     </div>
   );
 }

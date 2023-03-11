@@ -26,10 +26,10 @@ export default function BlogContainer({
       className={`${styles.BlogContainer} container mx-auto `}
     >
       <Head>
-        <title>Lohitaksha | {title}</title>
+        <title>Ujjawal | {title}</title>
         <meta
           name="description"
-          content="Lohitaksha Malhotra's portfolio website"
+          content="Ujjawal kumar  portfolio website"
         />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link

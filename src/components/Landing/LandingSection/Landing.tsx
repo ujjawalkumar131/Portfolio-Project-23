@@ -19,8 +19,8 @@ const Landing = () => {
       className="my-48 mx-auto flex flex-col px-12 text-center text-3xl font-extrabold sm:text-6xl md:text-7xl"
       ref={ref}
     >
-      Hello there, I&apos;m <div className="blue"> Lohitaksha Malhotra,</div>{" "}
-      Full stack developer and student at <div className="blue">BIT Mesra</div>
+      Hello there, I&apos;m <div className="blue"> Ujjawal Kumar</div>{" "}
+          Programmer , Web developer and student at <div className="blue">BIT Mesra,Ranchi</div>
       <Connect />
     </animated.div>
   );

@@ -18,25 +18,25 @@ const Connect = () => {
     <div className={styles.connect}>
       <animated.div style={fade} className={connectItemStyles}>
         <Link
-          href="https://www.linkedin.com/in/lohitaksha-malhotra-b84392201/"
+          href="https://www.linkedin.com/in/ujjawal-kumar-7a6ba2226"
           passHref>
           <Image src={linkedin} alt="linkedin" />
         </Link>
       </animated.div>
       <animated.div style={fade} className={connectItemStyles}>
-        <Link href="https://github.com/Lohit244" passHref>
+        <Link href="https://github.com/ujjawalkumar131" passHref>
           <Image src={github} alt="github" />
         </Link>
       </animated.div>
       <animated.div style={fade} className={connectItemStyles}>
-        <Link href="mailto:lohit244@gmail.com" passHref>
+        <Link href="mailto:Ujjawalraj131@gmail.com" passHref>
           <Image src={email} alt="email" />
         </Link>
       </animated.div>
       <animated.div style={fade}>
-        <Link href="/Resume.pdf" passHref>
+        <Link href="/" passHref>
           <div className="text-2xl px-4 py-1 bg-white text-black rounded-lg font-bold cursor-pointer">
-            Resume
+            Click here for Resume
           </div>
         </Link>
       </animated.div>

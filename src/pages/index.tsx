@@ -7,10 +7,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Lohitaksha | WebDev</title>
+        <title>Ujjawal | Portfolio</title>
         <meta
           name="description"
-          content="Lohitaksha Malhotra's portfolio website"
+          content="Ujjawal kumar portfolio website"
         />
         {/* Icons */}
         <link rel="shortcut icon" href="/images/favicon.ico" />

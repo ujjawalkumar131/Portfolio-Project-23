@@ -3,18 +3,18 @@ import ProjectCard from "./ProjectCard";
 import style from "./styles.module.css";
 import project1 from "public/images/naps.jpg";
 import project2 from "public/images/vsbuddies.png";
-import project3 from "public/images/portfolio22.png";
-import project4 from "public/images/portfolio20.png";
+import project3 from "public/images/new.jpg";
+import project4 from "public/images/portfolio22.jpg";
 
 export default function Projects() {
   const project1content =
-    "Built a website for NAPS society, BIT Mesra. The website featured member login and creation of new members.";
+    "Worked on the  website  as WEB Dev team for News and Publication society, BIT Mesra. The website featured member login and creation of new members.";
   const project2content =
     "This project aims to connect developers or college students with common interests, on the basis of common interests, skills and college. Also built a Visual Studio Code extenion for the chat component of the project. Got to top 10 at IEEE Megaproject";
   const project3content =
     "This is the code for the portfolio website you're on right now";
   const project4content =
-    "This is my first website, built during IEEE Lead 2.0. Got 3rd postion at the event for portfolio building project.";
+    "This is my ever first website, built during learning  Basics of Web devlopment. I only use HTML,CSS and Javascript to build this and sucessfully deployed in github.";
   return (
     <div className={style.Projects}>
       <OverlappingText
@@ -30,40 +30,25 @@ export default function Projects() {
         title="Naps Website"
         tags={["NextJs", "ExpressJs", "MongoDB", "Typescript"]}
       />
-      <div className="a10vhgap"></div>
-      <ProjectCard
-        content={project2content}
-        github="https://github.com/lohit244/vsbuddies-website"
-        image={project2}
-        projecturl="https://vsbuddies.netlify.app"
-        title="VS Buddies"
-        reverse
-        tags={[
-          "ReactJs",
-          "ExpressJs",
-          "MongoDB",
-          "VSCode Extension",
-          "Firebase",
-        ]}
-      />
+      
       <div className="a10vhgap"></div>
       <ProjectCard
         content={project3content}
-        github="https://github.com/lohit244/portfolio22"
+        github="https://github.com/ujjawalkumar131/Portfolio-Project-23"
         image={project3}
-        projecturl="https://lohitaksha.com"
-        title="Portfolio Project '22"
+        projecturl="/"
+        title="Portfolio Project '23"
         tags={["NextJs", "Typescript", "TailwindCSS"]}
       />
       <div className="a10vhgap"></div>
       <ProjectCard
         content={project4content}
-        github="https://github.com/lohit244/4"
+        github="https://github.com/ujjawalkumar131/Personal-website"
         image={project4}
-        projecturl="https://lohit244.github.io/4"
-        title="Portfolio Project '20"
+        projecturl="https://ujjawalkumar131.github.io/Personal-website/"
+        title="Portfolio Project '22"
         reverse
-        tags={["ReactJS"]}
+        tags={["HTML","CSS","Javascript"]}
       />
     </div>
   );

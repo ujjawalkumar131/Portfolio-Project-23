@@ -21,14 +21,14 @@ export default function About() {
         toptext="A bit more about me"
       />
       <animated.div className="text-3xl font-bold" style={fade}>
-        I am Lohitaksha Malhotra, I am currently in my 3<sup>rd</sup> year
-        persuing <div className="blue inline">Mechanical Engineering</div> at
+        I am Ujjawal kumar, I am currently in my 2<sup>nd</sup> year
+        persuing <div className="blue inline">Computer Science and  Engineering</div> at
         BIT Mesra. My interests lie in{" "}
         <div className="blue inline">
-          programming, web development and problem solving
+          programming, Problem solving  and Web Devlopment
         </div>
-        . I use MacOS, and have used Linux ({" "}
-        <div className="blue inline">Arch</div> btw ) as my main OS. I am also a{" "}
+        . I am also intresed in teaching stuffs , and Working Part-time in ({" "}
+        <div className="blue inline">Filo </div> ) as Verified Tutor. I am also a{" "}
         <div className="blue inline">Weeb</div> and a{" "}
         <div className="blue inline">Gamer</div>.
       </animated.div>
