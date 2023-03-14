@@ -19,22 +19,22 @@ const Connect = () => {
       <animated.div style={fade} className={connectItemStyles}>
         <Link
           href="https://www.linkedin.com/in/ujjawal-kumar-7a6ba2226"
-          passHref>
+          target="_blank" passHref>
           <Image src={linkedin} alt="linkedin" />
         </Link>
       </animated.div>
       <animated.div style={fade} className={connectItemStyles}>
-        <Link href="https://github.com/ujjawalkumar131" passHref>
+        <Link href="https://github.com/ujjawalkumar131" target="_blank" passHref>
           <Image src={github} alt="github" />
         </Link>
       </animated.div>
       <animated.div style={fade} className={connectItemStyles}>
-        <Link href="mailto:Ujjawalraj131@gmail.com" passHref>
+        <Link href="mailto:Ujjawalraj131@gmail.com" target="_blank" passHref>
           <Image src={email} alt="email" />
         </Link>
       </animated.div>
       <animated.div style={fade}>
-        <Link href="\Ujjawalkumar.pdf" passHref>
+        <Link href="\Ujjawalkumar.pdf" target="_blank" passHref>
           <div className="text-2xl px-4 py-1 bg-white text-black rounded-lg font-bold cursor-pointer">
             Click here for Resume
           </div>

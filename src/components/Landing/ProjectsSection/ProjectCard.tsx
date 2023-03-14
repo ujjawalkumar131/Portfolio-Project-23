@@ -98,10 +98,10 @@ export default function ProjectCard({
           ))}
         </div>
         <div className={styles.links}>
-          <Link href={github}>
+          <Link href={github} target="_blank">
             <div className={styles.github}>Source</div>
           </Link>
-          <Link href={projecturl}>
+          <Link href={projecturl} target="_blank">
             <div className={styles.projectUrl}>Link</div>
           </Link>
         </div>
